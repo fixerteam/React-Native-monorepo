@@ -1,0 +1,61 @@
+{
+  "root": true,
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["react", "import", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": true,
+        "peerDependencies": true
+      }
+    ],
+    "prettier/prettier": [
+      2,
+      {
+        "useTabs": false,
+        "printWidth": 120,
+        "tabWidth": 2,
+        "singleQuote": true,
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false,
+        "semi": false
+      }
+    ],
+    "semi": ["error", "never"],
+    "comma-dangle": ["error", "never"],
+    "quotes": [1, "single", "avoid-escape"],
+    "prefer-destructuring": [
+      "error",
+      {
+        "object": true,
+        "array": false
+      }
+    ],
+    "react/prefer-es6-class": [0, "always"],
+    "react/prefer-stateless-function": [
+      0,
+      {
+        "ignorePureComponents": true
+      }
+    ],
+    "react/jsx-filename-extension": 0,
+    "react/jsx-no-bind": [
+      2,
+      {
+        "ignoreRefs": false,
+        "allowArrowFunctions": false,
+        "allowBind": false
+      }
+    ],
+    "jsx-a11y/href-no-hash": "off"
+  }
+}
